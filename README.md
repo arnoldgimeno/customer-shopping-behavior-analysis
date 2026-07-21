@@ -68,6 +68,21 @@ instance set up — it isn't required to produce any of the charts.
 - Previous purchase count and purchase amount show only a weak relationship, with review rating
   scattered fairly evenly across both — high spenders aren't necessarily the most satisfied.
 
+## Pareto analysis
+
+Does a small share of items drive most of the revenue, the way the 80/20 rule would predict?
+Items are ranked by total revenue and plotted against their cumulative share of revenue:
+
+![Pareto analysis of revenue by item](assets/pareto_by_item.svg)
+
+**This dataset does not follow the 80/20 rule at the item level.** Revenue is spread almost
+evenly across the 25 items in the catalog — the top 20% of items (5 items) generate only ~22%
+of revenue, and it takes 80% of the catalog (20 of 25 items) to reach 80% of revenue. The mild
+skew noted above is a *category*-level pattern (Clothing ≈ 45% of revenue vs. an even 25%
+baseline across 4 categories) — a plurality, not Pareto-level concentration. A "focus on the
+top few SKUs" strategy isn't supported by this data; demand is broad-based, so category-level
+(not SKU-level) prioritization is the more defensible lever.
+
 ## Notes
 
 This is a from-scratch analytics/portfolio project — it is not a general-purpose retail
